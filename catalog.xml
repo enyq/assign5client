@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:2302/PackageWebService.asmx" uri="src/conf/xml-resources/web-service-references/PackageWebService/wsdl/localhost_2302/PackageWebService.asmx"/>
+    <system systemId="http://localhost:2302/PackageWebService.asmx?WSDL" uri="src/conf/xml-resources/web-service-references/PackageWebService/wsdl/localhost_2302/PackageWebService.asmx.wsdl"/>
+    <system systemId="http://localhost:8080/NewWebService/UserWebService?WSDL" uri="src/conf/xml-resources/web-service-references/UserWebService/wsdl/localhost_8080/NewWebService/UserWebService.wsdl"/>
+    <system systemId="http://localhost:8080/NewWebService/UserWebService?wsdl" uri="src/conf/xml-resources/web-service-references/UserWebService/wsdl/localhost_8080/NewWebService/UserWebService.wsdl"/>
+    <system systemId="http://localhost:8080/NewWebService/UserWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/UserWebService/wsdl/localhost_8080/NewWebService/UserWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/PackageManageWebService/PackageManageWebService?wsdl" uri="src/conf/xml-resources/web-service-references/PackageManageWebService/wsdl/localhost_8080/PackageManageWebService/PackageManageWebService.wsdl"/>
+    <system systemId="http://localhost:8080/PackageManageWebService/PackageManageWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/PackageManageWebService/wsdl/localhost_8080/PackageManageWebService/PackageManageWebService.xsd_1.xsd"/>
+</catalog>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Administrator</title>
+    </head>
+       <body>
+
+    <f:view>
+     
+        <h:form>
+         
+            <h:dataTable value="#{packageManagedBean.packs}" var="item">
+                  
+               
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Id"/>
+                    </f:facet>
+                    <h:outputText value="#{item.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Destination"/>
+                    </f:facet>
+                    <h:outputText value="#{item.destination}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Weight"/>
+                    </f:facet>
+                    <h:outputText value="#{item.weight}"/>
+                </h:column>
+                
+                <h:column>
+                    
+                            <h:commandLink action="#{packageManagedBean.register(item)}" value="  Edit" /> 
+                             <h:commandLink action="#{packageManagedBean.checkStatus(item)}" value="  Buy"/>
+                        
+                     
+                            <h:commandLink action="#{packageManagedBean.updateStatus(item)}" value="  Edit" /> 
+                            <h:commandLink action="#{packageManagedBean.delete(item)}" value="  Delete" /> 
+                     
+                    </h:column>
+            </h:dataTable>
+        </h:form>
+         <div class="right">
+        <h:form>
+           
+                  <f:facet name="header">Username</f:facet>
+                        <h:inputText id="username" value="#{userManagedBean.username}" size="30" required="true" styleClass="input_text"/> 				
+                  
+                        <f:facet name="header">Password</f:facet> 
+                        <h:inputText id="password" value="#{userManagedBean.password}" size="30" required="true" styleClass="input_text"/> 				
+                    
+                        <h:commandButton id="submit" value="Login" action="#{userManagedBean.login}" />
+                    
+        </h:form>
+         <h:form>
+             <h:commandLink action="#{userManagedBean.register}" value="Register" /> 
+    
+        </h:form>
+               </div>  
+        <h:form>
+                       
+  
+       <h:commandLink action="#{packageManagedBean.insert}" value="  Add package" /> 
+                      
+        </h:form>
+    </f:view>
+           
+</body>
+</html>
